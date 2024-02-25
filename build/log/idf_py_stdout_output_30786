@@ -1,0 +1,236 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/onur/esp-ws/voyager_v2.2/build/bootloader/esp-idf/esptool_py && /home/onur/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/onur/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/onur/esp-ws/voyager_v2.2/build/bootloader/bootloader.bin
+Bootloader binary size 0x5200 bytes. 0x2e00 bytes (36%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/voyager_main.c.obj
+[5/11] Building C object esp-idf/buttons/CMakeFiles/__idf_buttons.dir/buttons.c.obj
+FAILED: esp-idf/buttons/CMakeFiles/__idf_buttons.dir/buttons.c.obj 
+/home/onur/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.1-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/onur/esp-ws/voyager_v2.2/build/config -I/home/onur/esp-ws/voyager_v2.2/components/buttons/include -I/home/onur/esp/esp-idf/components/newlib/platform_include -I/home/onur/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/onur/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/onur/esp/esp-idf/components/freertos/esp_additions/include/freertos -I/home/onur/esp/esp-idf/components/freertos/esp_additions/include -I/home/onur/esp/esp-idf/components/freertos/esp_additions/arch/xtensa/include -I/home/onur/esp/esp-idf/components/esp_hw_support/include -I/home/onur/esp/esp-idf/components/esp_hw_support/include/soc -I/home/onur/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/home/onur/esp/esp-idf/components/esp_hw_support/port/esp32s3/. -I/home/onur/esp/esp-idf/components/esp_hw_support/port/esp32s3/private_include -I/home/onur/esp/esp-idf/components/heap/include -I/home/onur/esp/esp-idf/components/log/include -I/home/onur/esp/esp-idf/components/soc/include -I/home/onur/esp/esp-idf/components/soc/esp32s3 -I/home/onur/esp/esp-idf/components/soc/esp32s3/include -I/home/onur/esp/esp-idf/components/hal/esp32s3/include -I/home/onur/esp/esp-idf/components/hal/include -I/home/onur/esp/esp-idf/components/hal/platform_port/include -I/home/onur/esp/esp-idf/components/esp_rom/include -I/home/onur/esp/esp-idf/components/esp_rom/include/esp32s3 -I/home/onur/esp/esp-idf/components/esp_rom/esp32s3 -I/home/onur/esp/esp-idf/components/esp_common/include -I/home/onur/esp/esp-idf/components/esp_system/include -I/home/onur/esp/esp-idf/components/esp_system/port/soc -I/home/onur/esp/esp-idf/components/esp_system/port/include/private -I/home/onur/esp/esp-idf/components/xtensa/include -I/home/onur/esp/esp-idf/components/xtensa/esp32s3/include -I/home/onur/esp/esp-idf/components/lwip/include -I/home/onur/esp/esp-idf/components/lwip/include/apps -I/home/onur/esp/esp-idf/components/lwip/include/apps/sntp -I/home/onur/esp/esp-idf/components/lwip/lwip/src/include -I/home/onur/esp/esp-idf/components/lwip/port/include -I/home/onur/esp/esp-idf/components/lwip/port/freertos/include -I/home/onur/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/onur/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/onur/esp/esp-idf/components/driver/include -I/home/onur/esp/esp-idf/components/driver/deprecated -I/home/onur/esp/esp-idf/components/driver/analog_comparator/include -I/home/onur/esp/esp-idf/components/driver/dac/include -I/home/onur/esp/esp-idf/components/driver/gpio/include -I/home/onur/esp/esp-idf/components/driver/gptimer/include -I/home/onur/esp/esp-idf/components/driver/i2c/include -I/home/onur/esp/esp-idf/components/driver/i2s/include -I/home/onur/esp/esp-idf/components/driver/ledc/include -I/home/onur/esp/esp-idf/components/driver/mcpwm/include -I/home/onur/esp/esp-idf/components/driver/parlio/include -I/home/onur/esp/esp-idf/components/driver/pcnt/include -I/home/onur/esp/esp-idf/components/driver/rmt/include -I/home/onur/esp/esp-idf/components/driver/sdio_slave/include -I/home/onur/esp/esp-idf/components/driver/sdmmc/include -I/home/onur/esp/esp-idf/components/driver/sigma_delta/include -I/home/onur/esp/esp-idf/components/driver/spi/include -I/home/onur/esp/esp-idf/components/driver/temperature_sensor/include -I/home/onur/esp/esp-idf/components/driver/touch_sensor/include -I/home/onur/esp/esp-idf/components/driver/twai/include -I/home/onur/esp/esp-idf/components/driver/uart/include -I/home/onur/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/onur/esp/esp-idf/components/driver/touch_sensor/esp32s3/include -I/home/onur/esp/esp-idf/components/esp_pm/include -I/home/onur/esp/esp-idf/components/esp_ringbuf/include -mlongcalls  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=/home/onur/esp-ws/voyager_v2.2=. -fmacro-prefix-map=/home/onur/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/buttons/CMakeFiles/__idf_buttons.dir/buttons.c.obj -MF esp-idf/buttons/CMakeFiles/__idf_buttons.dir/buttons.c.obj.d -o esp-idf/buttons/CMakeFiles/__idf_buttons.dir/buttons.c.obj -c /home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c
+In file included from /home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:7:
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c: In function 'voyager_interrupt_task':
+/home/onur/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:545:36: warning: passing argument 2 of 'xQueueGenericSend' makes pointer from integer without a cast [-Wint-conversion]
+  545 |     xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+      |                                    ^~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    int
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:40:13: note: in expansion of macro 'xQueueSend'
+   40 |             xQueueSend(queue, GEAR_DOWN_PRESSED, 0);
+      |             ^~~~~~~~~~
+/home/onur/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:726:50: note: expected 'const void * const' but argument is of type 'int'
+  726 |                               const void * const pvItemToQueue,
+      |                               ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/onur/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:545:36: warning: passing argument 2 of 'xQueueGenericSend' makes pointer from integer without a cast [-Wint-conversion]
+  545 |     xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+      |                                    ^~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    int
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:45:13: note: in expansion of macro 'xQueueSend'
+   45 |             xQueueSend(queue, PHYSICAL_BRAKE_PRESSED, 0);
+      |             ^~~~~~~~~~
+/home/onur/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:726:50: note: expected 'const void * const' but argument is of type 'int'
+  726 |                               const void * const pvItemToQueue,
+      |                               ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:61: warning: character constant too long for its type
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |                                                             ^
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: warning: character constant too long for its type
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      | ^          
+In file included from /home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:12:
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:22: warning: passing argument 2 of 'esp_log_write' makes pointer from integer without a cast [-Wint-conversion]
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |                      ^~~~~~~~~
+      |                      |
+      |                      int
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:410:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  410 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:136:55: note: expected 'const char *' but argument is of type 'int'
+  136 | void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
+      |                                           ~~~~~~~~~~~~^~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:265:27: error: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Werror=format=]
+  265 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:268:27: note: in expansion of macro 'LOG_COLOR'
+  268 | #define LOG_COLOR_E       LOG_COLOR(LOG_COLOR_RED)
+      |                           ^~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:282:37: note: in expansion of macro 'LOG_COLOR_E'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:410:86: note: in expansion of macro 'LOG_FORMAT'
+  410 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: warning: character constant too long for its type
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      | ^          
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: warning: character constant too long for its type
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:22: warning: passing argument 2 of 'esp_log_write' makes pointer from integer without a cast [-Wint-conversion]
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |                      ^~~~~~~~~
+      |                      |
+      |                      int
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:411:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  411 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:136:55: note: expected 'const char *' but argument is of type 'int'
+  136 | void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
+      |                                           ~~~~~~~~~~~~^~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:265:27: error: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Werror=format=]
+  265 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:269:27: note: in expansion of macro 'LOG_COLOR'
+  269 | #define LOG_COLOR_W       LOG_COLOR(LOG_COLOR_BROWN)
+      |                           ^~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:282:37: note: in expansion of macro 'LOG_COLOR_W'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:411:86: note: in expansion of macro 'LOG_FORMAT'
+  411 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: warning: character constant too long for its type
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      | ^          
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: warning: character constant too long for its type
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:22: warning: passing argument 2 of 'esp_log_write' makes pointer from integer without a cast [-Wint-conversion]
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |                      ^~~~~~~~~
+      |                      |
+      |                      int
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:412:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  412 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:136:55: note: expected 'const char *' but argument is of type 'int'
+  136 | void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
+      |                                           ~~~~~~~~~~~~^~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: error: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Werror=format=]
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      | ^          
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:282:59: note: in definition of macro 'LOG_FORMAT'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: warning: character constant too long for its type
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      | ^          
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: warning: character constant too long for its type
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:22: warning: passing argument 2 of 'esp_log_write' makes pointer from integer without a cast [-Wint-conversion]
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |                      ^~~~~~~~~
+      |                      |
+      |                      int
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:413:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  413 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:136:55: note: expected 'const char *' but argument is of type 'int'
+  136 | void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
+      |                                           ~~~~~~~~~~~~^~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: error: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Werror=format=]
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      | ^          
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:282:59: note: in definition of macro 'LOG_FORMAT'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: warning: character constant too long for its type
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      | ^          
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:1: warning: character constant too long for its type
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:22: warning: passing argument 2 of 'esp_log_write' makes pointer from integer without a cast [-Wint-conversion]
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |                      ^~~~~~~~~
+      |                      |
+      |                      int
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:414:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  414 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:136:55: note: expected 'const char *' but argument is of type 'int'
+  136 | void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
+      |                                           ~~~~~~~~~~~~^~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:265:27: error: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Werror=format=]
+  265 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:270:27: note: in expansion of macro 'LOG_COLOR'
+  270 | #define LOG_COLOR_I       LOG_COLOR(LOG_COLOR_GREEN)
+      |                           ^~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:282:37: note: in expansion of macro 'LOG_COLOR_I'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:414:86: note: in expansion of macro 'LOG_FORMAT'
+  414 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/home/onur/esp/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/onur/esp-ws/voyager_v2.2/components/buttons/buttons.c:49:13: note: in expansion of macro 'ESP_LOGE'
+   49 |             ESP_LOGE('BUTTONS', "invalid button input .. \n");
+      |             ^~~~~~~~
+cc1: some warnings being treated as errors
+ninja: build stopped: subcommand failed.

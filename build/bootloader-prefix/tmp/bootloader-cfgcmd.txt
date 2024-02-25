@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DSDKCONFIG=/home/onur/esp-ws/voyager_v2.2/sdkconfig;-DIDF_PATH=/home/onur/esp/esp-idf;-DIDF_TARGET=esp32s3;-DPYTHON_DEPS_CHECKED=1;-DPYTHON=/home/onur/.espressif/python_env/idf5.1_py3.8_env/bin/python;-DEXTRA_COMPONENT_DIRS=/home/onur/esp/esp-idf/components/bootloader;-DPROJECT_SOURCE_DIR=/home/onur/esp-ws/voyager_v2.2;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'
