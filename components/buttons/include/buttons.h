@@ -4,6 +4,7 @@
 #define BUTTONS_QUEUE_SIZE 3
 #define GEAR_QUEUE_SIZE 1
 #define PRESSED 0
+#define NOT_PRESSED 1
 
 
 #define GEAR_UP_IDX 0
@@ -25,7 +26,7 @@
 #define DEBOUNCE_DELAY_MS   500
 void init_BUTTONS(void);
 void voyager_interrupt_task(void* arg);
-void voyager_gear_task(void* pvParameters);
+
 
 
 #endif

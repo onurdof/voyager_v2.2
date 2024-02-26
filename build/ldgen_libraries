@@ -62,13 +62,13 @@
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/ulp/libulp.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/usb/libusb.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
+/home/onur/esp-ws/voyager_v2.2/build/esp-idf/pedal_encoder/libpedal_encoder.a
+/home/onur/esp-ws/voyager_v2.2/build/esp-idf/gidon_encoder/libgidon_encoder.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/intercommunication/libintercommunication.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/uart_interface/libuart_interface.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/stepper/libstepper.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/buttons/libbuttons.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/feedback/libfeedback.a
-/home/onur/esp-ws/voyager_v2.2/build/esp-idf/gidon_encoder/libgidon_encoder.a
-/home/onur/esp-ws/voyager_v2.2/build/esp-idf/pedal_encoder/libpedal_encoder.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/espressif__tinyusb/libespressif__tinyusb.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/espressif__esp_tinyusb/libespressif__esp_tinyusb.a
 /home/onur/esp-ws/voyager_v2.2/build/esp-idf/main/libmain.a

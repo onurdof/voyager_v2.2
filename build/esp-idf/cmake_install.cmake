@@ -409,6 +409,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/onur/esp-ws/voyager_v2.2/build/esp-idf/pedal_encoder/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/onur/esp-ws/voyager_v2.2/build/esp-idf/gidon_encoder/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/onur/esp-ws/voyager_v2.2/build/esp-idf/intercommunication/cmake_install.cmake")
 endif()
 
@@ -430,16 +440,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/onur/esp-ws/voyager_v2.2/build/esp-idf/feedback/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/onur/esp-ws/voyager_v2.2/build/esp-idf/gidon_encoder/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/onur/esp-ws/voyager_v2.2/build/esp-idf/pedal_encoder/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

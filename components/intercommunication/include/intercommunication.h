@@ -10,7 +10,8 @@
 #include "freertos/task.h"
 #include "freertos/queue.h"
 #include "freertos/semphr.h"
-
+#include "pedal_encoder.h"
+#include "gidon_encoder.h"
 
 #define HEADER_IDX      0
 #define FAN_IDX         1
@@ -40,10 +41,15 @@ typedef struct intercommunication
     QueueHandle_t rx_queue;
     QueueHandle_t button_queue;
     QueueHandle_t gear_queue;
+    pedal_speed_t pedal_vars;
+    gidon_enc_data gidon_data;
     uint32_t motor_old_pose;
     uint32_t motor_current_pose;
-    bool calibrated;
+    uint32_t usb_gear;
     uint8_t gear;
+    bool calibrated;
+    
+
 
 }intercommunication_t,*intercommunication_t_ptr;
 

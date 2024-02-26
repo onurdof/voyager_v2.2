@@ -90,7 +90,7 @@ void gidon_enc_task(void* args)
         else {
             ESP_ERROR_CHECK(pcnt_unit_get_count(pcnt_unit, &pulse_count));
             //printf("Pulse count rotary: %d \n", pulse_count);
-            (*rotary_enc_ptr) = (pulse_count / 3.5 ); // 2.65 for one 2.10 for the other
+            (*rotary_enc_ptr) = (pulse_count / 4 ); // 2.65 for one 2.10 for the other
             //if((*rotary_enc_ptr) <= -127)
             //{
             //    (*rotary_enc_ptr) = -127;

@@ -1,0 +1,59 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/onur/esp-ws/voyager_v2.2/build/bootloader/esp-idf/esptool_py && /home/onur/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/onur/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/onur/esp-ws/voyager_v2.2/build/bootloader/bootloader.bin
+Bootloader binary size 0x5200 bytes. 0x2e00 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/buttons/CMakeFiles/__idf_buttons.dir/buttons.c.obj
+[5/10] Linking C static library esp-idf/buttons/libbuttons.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable voyager_v2.0.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/onur/esp-ws/voyager_v2.2/build/voyager_v2.bin
+[9/10] cd /home/onur/esp-ws/voyager_v2.2/build/esp-idf/esptool_py && /home/onur/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/onur/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/onur/esp-ws/voyager_v2.2/build/partition_table/partition-table.bin /home/onur/esp-ws/voyager_v2.2/build/voyager_v2.bin
+voyager_v2.bin binary size 0x439b0 bytes. Smallest app partition is 0x100000 bytes. 0xbc650 bytes (74%) free.
+[9/10] cd /home/onur/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/onur/esp/esp-idf -D "SERIAL_TOOL=/home/onur/.espressif/python_env/idf5.1_py3.8_env/bin/python;;/home/onur/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/onur/esp-ws/voyager_v2.2/build -P /home/onur/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 voyager_v2.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: 34:85:18:51:88:48
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00053fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20992 bytes to 13327...
+Writing at 0x00000000... (100 %)
+Wrote 20992 bytes (13327 compressed) at 0x00000000 in 0.7 seconds (effective 241.3 kbit/s)...
+Hash of data verified.
+Compressed 276912 bytes to 151239...
+Writing at 0x00010000... (10 %)
+Writing at 0x0001d624... (20 %)
+Writing at 0x00025157... (30 %)
+Writing at 0x0002b024... (40 %)
+Writing at 0x0003158e... (50 %)
+Writing at 0x0003757c... (60 %)
+Writing at 0x0003de60... (70 %)
+Writing at 0x000465f0... (80 %)
+Writing at 0x0004c0d2... (90 %)
+Writing at 0x00051f14... (100 %)
+Wrote 276912 bytes (151239 compressed) at 0x00010000 in 3.5 seconds (effective 627.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 442.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

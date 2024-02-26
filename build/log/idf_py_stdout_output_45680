@@ -1,0 +1,21 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+Processing 3 dependencies:
+[1/3] espressif/esp_tinyusb (1.4.3)
+[2/3] espressif/tinyusb (0.15.0~5)
+[3/3] idf (5.1.0)
+-- Project sdkconfig file /home/onur/esp-ws/voyager_v2.2/sdkconfig
+Loading defaults file /home/onur/esp-ws/voyager_v2.2/sdkconfig.defaults...
+-- App "voyager_v2.0" version: e7f1b83-dirty
+-- Adding linker script /home/onur/esp-ws/voyager_v2.2/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/onur/esp/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+-- Adding linker script /home/onur/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /home/onur/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /home/onur/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /home/onur/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /home/onur/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /home/onur/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Configuring incomplete, errors occurred!
+See also "/home/onur/esp-ws/voyager_v2.2/build/CMakeFiles/CMakeOutput.log".
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/onur/esp-ws/voyager_v2.2 -B/home/onur/esp-ws/voyager_v2.2/build
