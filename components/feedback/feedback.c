@@ -41,25 +41,30 @@ static void add_wind_effect(uint8_t param)
 }
 static void add_forcement_effect(intercommunication_t_ptr intercomm_ptr, uint8_t param)
 { 
+    
     if(param != previous_forcement_state || intercomm_ptr->gear != previous_gear_state)
     {
+
         switch (param)
         {
-        case 1:
-            move_motor(intercomm_ptr,normal_effects[(intercomm_ptr->gear - 1 )]);
-            break; 
-        case 2:
-            move_motor(intercomm_ptr,forcement_effects[(intercomm_ptr->gear - 1 )]);
-            break;
-        case 3 :
-            move_motor(intercomm_ptr,downhill_effects[(intercomm_ptr->gear - 1 )]);
-            break;
-        default:    
-            break;
+            case 1:
+                intercomm_ptr->change_gear = false;
+                move_motor(intercomm_ptr,normal_effects[(intercomm_ptr->gear - 1 )]);
+                intercomm_ptr->change_gear = true;
+                break; 
+            case 2:
+                move_motor(intercomm_ptr,forcement_effects[(intercomm_ptr->gear - 1 )]);
+                break;
+            case 3 :
+                move_motor(intercomm_ptr,downhill_effects[(intercomm_ptr->gear - 1 )]);
+                break;
+            default:    
+                break;
         }
         //printf("Gear : %d \n -- motor pose : %ld \n",intercomm_ptr->gear,intercomm_ptr->motor_current_pose);
         previous_forcement_state = param;
         previous_gear_state = intercomm_ptr->gear;
+
     }
 
 }
@@ -75,9 +80,10 @@ void add_feedback(void* pvParameters)
         if(xQueueReceive(intercomm_ptr->rx_queue, received_data, portMAX_DELAY) == pdTRUE)
         {
             //printf("Received fand data : %d - forcement data : %d \n",received_data[FAN_IDX], received_data[FORCEMENT_IDX]);
-            //printf("Received gear : %d \n",intercomm_ptr->gear);
+            printf("Received gear : %d \n",intercomm_ptr->gear);
             add_wind_effect(received_data[FAN_IDX]);
             add_forcement_effect(intercomm_ptr, received_data[FORCEMENT_IDX]);
+            
         }
     }
     

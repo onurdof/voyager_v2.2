@@ -141,14 +141,13 @@ void move_motor(intercommunication_t_ptr intercommptr,uint32_t pos)
         {
             //printf("Motor is moving forward .. \n");
             //gpio_set_level(STEP_MOTOR_GPIO_EN, STEP_MOTOR_ENABLE_LEVEL);
-            vTaskDelay(50/portTICK_PERIOD_MS);
+            vTaskDelay(10/portTICK_PERIOD_MS);
             gpio_set_level(STEP_MOTOR_GPIO_DIR, STEP_MOTOR_SPIN_DIR_COUNTERCLOCKWISE);
-            vTaskDelay(50/portTICK_PERIOD_MS);
+            vTaskDelay(10/portTICK_PERIOD_MS);
             tx_config.loop_count = abs(diff);
             ESP_ERROR_CHECK(rmt_transmit(motor_chan, uniform_motor_encoder, &uniform_speed_hz, sizeof(uniform_speed_hz), &tx_config));
             ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
             //printf("Reached pose : %d . \n",motor_data->current_pose);
-            vTaskDelay(50/portTICK_PERIOD_MS);
             intercommptr->motor_old_pose = intercommptr->motor_current_pose;
         }
         else if (diff == 0)
@@ -159,16 +158,14 @@ void move_motor(intercommunication_t_ptr intercommptr,uint32_t pos)
         }
         else
         {
-            vTaskDelay(50/portTICK_PERIOD_MS);
+            vTaskDelay(10/portTICK_PERIOD_MS);
             gpio_set_level(STEP_MOTOR_GPIO_DIR, STEP_MOTOR_SPIN_DIR_CLOCKWISE);
-            vTaskDelay(50/portTICK_PERIOD_MS);
+            vTaskDelay(10/portTICK_PERIOD_MS);
             tx_config.loop_count = abs(diff);
             ESP_ERROR_CHECK(rmt_transmit(motor_chan, uniform_motor_encoder, &uniform_speed_hz, sizeof(uniform_speed_hz), &tx_config));
             ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
-            vTaskDelay(50/portTICK_PERIOD_MS);
             intercommptr->motor_old_pose = intercommptr->motor_current_pose;
         }
-        vTaskDelay(50/portTICK_PERIOD_MS);
 
     }
     else

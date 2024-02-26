@@ -48,8 +48,7 @@ typedef struct intercommunication
     uint32_t usb_gear;
     uint8_t gear;
     bool calibrated;
-    
-
+    bool change_gear;
 
 }intercommunication_t,*intercommunication_t_ptr;
 

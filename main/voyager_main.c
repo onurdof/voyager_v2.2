@@ -147,7 +147,7 @@ void app_send_hid(void *args)
 {
     while (true)
     {
-        vTaskDelay(pdMS_TO_TICKS(50));
+        vTaskDelay(pdMS_TO_TICKS(100));
         if (tud_mounted())
         {
             tud_hid_gamepad_report(HID_ITF_PROTOCOL_NONE,intercomm.gidon_data, (int8_t)((intercomm.pedal_vars.smooth_speed) * 2), 0, 0, 0, 0, 0, intercomm.usb_gear);

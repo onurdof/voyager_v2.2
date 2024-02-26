@@ -21,7 +21,7 @@
  It means that the function is only accessible within the same file in which it is declared.
 */
 static void send_data_to_queue(QueueHandle_t queue,uint8_t* data, size_t length) {
-    xQueueSend(queue, data, 0); // Send data to the queue
+    xQueueSend(queue, data, portMAX_DELAY); // Send data to the queue
 }
 
 void init_RS232()

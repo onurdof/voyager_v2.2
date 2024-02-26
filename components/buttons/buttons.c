@@ -66,7 +66,7 @@ void voyager_interrupt_task(void *pvParameters)
     {
         if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY))
         {
-            if (gpio_get_level(io_num) == 0)
+            if (gpio_get_level(io_num) == 0 && intercomm_ptr->change_gear)
             {
                 //printf("Interrupt occured .. %ld pin \n", io_num);
                 switch (io_num)
@@ -89,7 +89,6 @@ void voyager_interrupt_task(void *pvParameters)
                     if (intercomm_ptr->gear <= 1)
                     {
                         intercomm_ptr->gear = 1;
-                        vTaskDelay(200 / portTICK_PERIOD_MS);
                     }
                     else
                     {
@@ -102,7 +101,7 @@ void voyager_interrupt_task(void *pvParameters)
                 case PHYSICAL_BRAKE_BUTTON_PIN:
                     // data[PHYSICAL_BRAKE_IDX] = gpio_get_level(PHYSICAL_BRAKE_BUTTON_PIN);
                     intercomm_ptr->usb_gear = (1ULL << 0);
-                    vTaskDelay(200 / portTICK_PERIOD_MS);
+                    vTaskDelay(240 / portTICK_PERIOD_MS);
                     break;
 
                 default:
@@ -122,7 +121,7 @@ void voyager_interrupt_task(void *pvParameters)
             intercomm_ptr->usb_gear = 0;
         }
 
-        vTaskDelay(200 / portTICK_PERIOD_MS);
+        vTaskDelay(20 / portTICK_PERIOD_MS);
     }
 }
 
